@@ -1,4 +1,5 @@
 #
+# Copyright (C) 2015 Console, Inc.
 # Copyright (C) 2014 The Android-x86 Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,23 +15,26 @@
 # limitations under the License.
 #
 
-# Common packages for Android-x86 platform.
+# Common packages for Console OS - TODO: Add more balls. https://www.youtube.com/watch?v=ghnhVj8Ymm0
+# Disabled list
+#    Launcher3 \
+#    RSSReader \
+#    BasicSmsReceiver \
+#    gps.huawei \
+#    libhuaweigeneric-ril \
+#    MagicSmokeWallpapers \
 
 PRODUCT_PACKAGES := \
-    BasicSmsReceiver \
     Development \
     Galaxy4 \
     GlobalTime \
     HoloSpiralWallpaper \
-    Launcher3 \
     LiveWallpapers \
     LiveWallpapersPicker \
-    MagicSmokeWallpapers \
     NotePad \
     PhaseBeam \
     PinyinIME \
     Provision \
-    RSSReader \
     VisualizationWallpapers \
     camera.x86 \
     chat \
@@ -38,12 +42,10 @@ PRODUCT_PACKAGES := \
     drmserver \
     eject \
     gps.default \
-    gps.huawei \
     hwcomposer.x86 \
     icu.dat \
     io_switch \
     libGLES_android \
-    libhuaweigeneric-ril \
     lights.default \
     make_ext4fs \
     parted \
@@ -64,19 +66,20 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf \
 
+#    mount.exfat \
 PRODUCT_PACKAGES += \
     badblocks \
     e2fsck \
     mke2fs \
     mkntfs \
-    mount.exfat \
     ntfs-3g \
     ntfsfix \
     resize2fs \
     tune2fs \
 
+#    TSCalibration2 \
 # Third party apps
 PRODUCT_PACKAGES += \
     CMFileManager \
     Superuser \
-    TSCalibration2 \
+    Trebuchet \

@@ -1,4 +1,5 @@
 #
+# Copyright (C) 2015 Console, Inc.
 # Copyright (C) 2014 The Android-x86 Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -25,10 +26,11 @@ PRODUCT_PROPERTY_OVERRIDES := \
 $(call inherit-product,$(SRC_TARGET_DIR)/product/locales_full.mk)
 
 # Get everything else from the parent package
-$(call inherit-product,$(SRC_TARGET_DIR)/product/generic.mk)
+$(call inherit-product,$(SRC_TARGET_DIR)/product/generic_no_telephony.mk)
 
 # Get some sounds
 $(call inherit-product-if-exists,frameworks/base/data/sounds/AudioPackage6.mk)
 
-$(call inherit-product,$(LOCAL_PATH)/device.mk)
-$(call inherit-product,$(LOCAL_PATH)/packages.mk)
+# Additional Android-x86 payloads, hardcoding path because the logical path can break some trees
+$(call inherit-product,device/generic/common/device.mk)
+$(call inherit-product,device/generic/common/packages.mk)
