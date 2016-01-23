@@ -1,4 +1,5 @@
 #
+# Copyright (C) 2016 Console, Inc.
 # Copyright (C) 2013 The Android-x86 Open Source Project
 #
 # License: GNU Public License v2 or later
@@ -43,6 +44,7 @@ function init_hal_bluetooth()
 			modprobe hci-uart
 			BTUART_PORT=/dev/ttyS1
 			brcm_patchram_plus -d --no2bytes --enable_hci --patchram /system/lib/firmware/brcm/bcm43241b4.hcd $BTUART_PORT
+			modprobe -r brcmfmac && modprobe brcmfmac
 			;;
 		MacBookPro8*)
 			rmmod b43
